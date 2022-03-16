@@ -1,11 +1,34 @@
 :root {
     --orange-color: #f44336;
+    --blue-font-color: ##000052;
 }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family:  'Roboto'
+}
+
+.container {
+    max-width: 1070px;
+    margin: auto;
+}
+
+.default-cont {
+    padding: 35px 0;
+    margin: auto;
+}
+
+.default-cont h2 {
+    margin-bottom: 25px;
+    font-weight: 300;
+    color: var(--blue-font-color);
+}
+.default-cont p {
+    font-weight: 300;
+}
+.default-cont p span {
+    font-weight: bold;
 }
 
 header {
@@ -57,9 +80,21 @@ header {
 }
 
 .travel-box {
-    height: 40%;
     background-color: #fff;
     width: 880px;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+
+.options-box {
+    width: 880px;
+    border-radius: 5px;
+}
+
+.all-options {
+    width: 2640px;
+    transition: margin 300ms ease-in-out;
+    display: flex;
 }
 
 .select-buy {
@@ -71,7 +106,146 @@ header {
 .option-buy {
     flex: 1;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    font-size: 14px;
+    transition: background-color 300ms ease-in-out;
 }
-.option-buy.active {
+
+.option-buy.active, .option-buy:hover {
     background-color: var(--orange-color);
+}
+
+.title-option {
+    color: #fff;
+}
+
+.options-box {
+    padding: 30px 10px;
+}
+
+.options-box h2 {
+    font-weight: 300;
+    margin: 10px ;
+}
+
+.travel-table {
+    width: 100%;
+}
+.travel-table td, .travel-table th {
+    padding: 0 5px;
+}
+.travel-table th {
+    text-align: left;
+    color: var(--blue-font-color);
+    font-weight: 400;
+}
+
+.travel-table input, .options-button {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    border: 1px solid #828f99;
+    outline: none;
+    border-radius: 5px;
+}
+
+.options-button {
+    width: 40%;
+    font-size: 15px;
+    background-color: #616161;
+    color: #ffffff;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 150ms ease-in-out;
+}
+.options-button:hover {
+    background-color: #4b4b4b; 
+}
+
+.travel-table input::placeholder {
+    color: #828f99;
+    font-size: 15px;
+}
+
+/* Good Offers */
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-box {
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.img-box:nth-child(1) {
+    grid-area: cinqueterre;
+    padding-left: 0;
+}
+.img-box:nth-child(2) {
+    grid-area: newyork;
+}
+.img-box:nth-child(3) {
+    grid-area: sanfran;
+}
+.img-box:nth-child(4) {
+    grid-area: pisa;
+}
+.img-box:nth-child(5) {
+    grid-area: paris;
+}
+
+.images-good-offers {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "cinqueterre newyork sanfran"
+    "cinqueterre pisa paris";
+    width: 100%;
+}
+
+.city-name {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 175px;
+    color: #ffffff;
+    bottom: 10px;
+    font-weight: 600;
+}
+
+.about-city {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 150ms ease-in-out;
+}
+
+.img-box:nth-child(1) .about-city {
+    left: 0;
+}
+
+.about-city:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.about-city p {
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    color: transparent;
+    transition: color 150ms ease-in-out;
+}
+.img-box:hover .about-city p {
+    color: #fff;
 }

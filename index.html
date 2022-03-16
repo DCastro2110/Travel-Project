@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <script src="assets/js/app.js" defer></script>
     <title>Travel</title>
 </head>
 <body>
@@ -27,9 +28,98 @@
         <div class="main-container">
             <div class="travel-box">
                 <div class="select-buy">
-                    <div class="option-buy active"></div>
-                    <div class="option-buy"></div>
-                    <div class="option-buy"></div>
+                    <div class="option-buy active flight-button">
+                        <img src="assets/images/airplanemode_active_black_24dp.svg">
+                        <div class="title-option">Flight</div>
+                    </div>
+                    <div class="option-buy hotel-button">
+                        <img src="assets/images/hotel_white_24dp.svg">
+                        <div class="title-option">Hotel</div>
+                    </div>
+                    <div class="option-buy rental-button">
+                        <img src="assets/images/directions_car_black_24dp.svg">
+                        <div class="title-option">Rental</div>
+                    </div>
+                </div>
+
+                <div class="all-options">
+                    <div class="flight-box options-box">
+                        <h2>Travel the world with us</h2>
+                        <form action="" method="post">
+                            <table class="travel-table">
+                                <tr>
+                                    <th><label for="departing">From</label></th>
+                                    <th><label for="arriving">To</label></th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" id="departing" placeholder="Departing From" name="departing">
+                                    </td>
+                                    <td><input type="text" id="arriving" placeholder="Arriving at" name="arriving">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="options-button">Search and find dates</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+    
+                    <div class="hotel-box options-box">
+                        <h2>Choose a Hotel</h2>
+                    </div>
+    
+                    <div class="rental-box options-box">
+                        <h2>Rental a car</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="good-offers-sec">
+        <div class="container">
+            <div class="good-offers-cont default-cont">
+                <h2>Good Offers Right Now</h2>
+                <p>Up to <span>50%</span> discount</p>
+
+                <div class="images-good-offers">
+                    <div class="img-box">
+                        <p class="city-name">Cinque Terre</p>
+                        <img src="media/cinqueterre.jpg" alt="">
+                        <div class="about-city">
+                            <p>Cinque Terre é um acidentado trecho de terra, na Itália, na costa da Riviera Ligure situado entre Punta Mesco próximo a Levanto e o cabo de Montenero próximo a Portovenere e compreende as comunas de Monterosso, Vernazza, Riomaggiore com os distritos de Corniglia e Manarola. Constituem uma das principais atrações turísticas da Riviera Ligure.</p>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <p class="city-name">New York</p>
+                        <img src="media/newyork.jpg" alt="">
+                        <div class="about-city">
+                            <p>Nova Iorque (também referida como Nova York), oficialmente Cidade de Nova Iorque (em inglês: New York City), é a cidade mais populosa do estado de Nova Iorque e dos Estados Unidos.</p>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <p class="city-name">San Francisco</p>
+                        <img src="media/sanfran.jpg" alt="">
+                        <div class="about-city">
+                            <p>São Francisco, oficialmente Cidade e Condado de São Francisco (em inglês: City and County of San Francisco), é a quarta cidade mais populosa do estado da Califórnia e a 17ª mais populosa dos Estados Unidos, com uma população de mais de 873 mil habitantes, segundo o censo nacional de 2020.</p>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <p class="city-name">Pisa</p>
+                        <img src="media/pisa.jpg" alt="">
+                        <div class="about-city">
+                            <p>Pisa é uma comuna italiana da região da Toscana, província de Pisa, com cerca de 85 379 habitantes. Estende-se por uma área de 185 km², tendo uma densidade populacional de 462 hab/km².</p>
+                        </div>
+                    </div>
+                    <div class="img-box">
+                        <p class="city-name">Paris</p>
+                        <img src="media/paris.jpg" alt="">
+                        <div class="about-city">
+                            <p>Paris (pronúncia em francês: [paʁi] ) é a capital e a mais populosa cidade da França, com uma população estimada em 2020 de 2 148 271 habitantes em uma área de 105 quilômetros quadrados.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
