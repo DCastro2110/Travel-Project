@@ -1,9 +1,9 @@
 (function() {
     document.addEventListener('click', (e) => {
         const el = e.target;
-        const allOptions = document.querySelector('.all-options');
+        const allOptions = document.querySelector('.slider-options-buy');
         const optionsBuy = document.querySelectorAll('.option-buy');
-        const margins = ['0', '-880px', '-1760px']
+        const margins = ['0', '-100%', '-200%']
 
         for (i in optionsBuy) {
             if (el === optionsBuy[i] || el.parentElement === optionsBuy[i]) {

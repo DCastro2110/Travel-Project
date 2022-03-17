@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/airplanemode_active_black_24dp.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap" rel="stylesheet">
     <script src="assets/js/app.js" defer></script>
     <title>Travel</title>
+
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="left-header">
-                <img src="assets/images/location_on_black_24dp.svg" alt="">
+                <img src="assets/images/location_on_black_24dp.svg" alt="Símbolo de Gps. O símbolo de GPS tem uma cabeça em formato circular com uma ponta na parte inferior">
                 <h2>Logo</h2>
             </div>
             <div class="right-header">
-                <img src="assets/images/search_black_24dp.svg" alt="">
+                <img src="assets/images/search_black_24dp.svg" alt="Lupa. A lupa é círculo, com uma lente dentro, acoplado a um suporte reto. A lupa serve para aumentar o tamanho de objetos. Nesse caso, a lupa é um símbolo de pesquisa. ">
             </div>
         </div>
     </header>
@@ -42,14 +44,15 @@
                     </div>
                 </div>
 
-                <div class="all-options">
+                <div class="slider-options-buy">
                     <div class="flight-box options-box">
                         <h2>Travel the world with us</h2>
+                        
                         <form action="" method="post">
-                            <table class="travel-table">
+                            <table class="options-table">
                                 <tr>
-                                    <th><label for="departing">From</label></th>
-                                    <th><label for="arriving">To</label></th>
+                                    <td><label for="departing">From</label></td>
+                                    <td><label for="arriving">To</label></td>
                                 </tr>
                                 <tr>
                                     <td><input type="text" id="departing" placeholder="Departing From" name="departing">
@@ -58,7 +61,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td colspan="2">
                                         <button class="options-button">Search and find dates</button>
                                     </td>
                                 </tr>
@@ -68,11 +71,62 @@
     
                     <div class="hotel-box options-box">
                         <h2>Choose a Hotel</h2>
+
+                        <form action="" method="post">
+                            <table class="options-table">
+                                <tr>
+                                    <td colspan="2"><label for="local-hotel">Local</label></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><input type="text" id="local-hotel" placeholder="Select a local" name="local-hotel"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="check-in">Check-in</label></td>
+                                    <td><label for="checkout">Checkout</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" id="check-in" name="check-in"></td>
+                                    <td><input type="date" id="checkout" name="checkout"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button class="options-button">Search and find dates</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
     
                     <div class="rental-box options-box">
                         <h2>Rental a car</h2>
+
+                        <form action="" method="post">
+                            <table class="options-table">
+                                <tr>
+                                    <td><label for="local">Model:</label></td>
+                                    <td><label for="local-rent">Local:</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" id="model" placeholder="Select a model" name="local"></td>
+                                    <td><input type="text" id="local-rent" placeholder="Select a local" name="local-rent"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="pick-up">Pick-up Date</label></td>
+                                    <td><label for="return-date">Return Date</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="date" id="pick-up" name="check-in"></td>
+                                    <td><input type="date" id="return-date" name="checkout"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button class="options-button">Search and find dates</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -85,35 +139,35 @@
                 <p>Up to <span>50%</span> discount</p>
 
                 <div class="images-good-offers">
-                    <div class="img-box">
+                    <div class="img-box-gf">
                         <p class="city-name">Cinque Terre</p>
                         <img src="media/cinqueterre.jpg" alt="">
                         <div class="about-city">
                             <p>Cinque Terre é um acidentado trecho de terra, na Itália, na costa da Riviera Ligure situado entre Punta Mesco próximo a Levanto e o cabo de Montenero próximo a Portovenere e compreende as comunas de Monterosso, Vernazza, Riomaggiore com os distritos de Corniglia e Manarola. Constituem uma das principais atrações turísticas da Riviera Ligure.</p>
                         </div>
                     </div>
-                    <div class="img-box">
+                    <div class="img-box-gf">
                         <p class="city-name">New York</p>
                         <img src="media/newyork.jpg" alt="">
                         <div class="about-city">
                             <p>Nova Iorque (também referida como Nova York), oficialmente Cidade de Nova Iorque (em inglês: New York City), é a cidade mais populosa do estado de Nova Iorque e dos Estados Unidos.</p>
                         </div>
                     </div>
-                    <div class="img-box">
+                    <div class="img-box-gf">
                         <p class="city-name">San Francisco</p>
                         <img src="media/sanfran.jpg" alt="">
                         <div class="about-city">
                             <p>São Francisco, oficialmente Cidade e Condado de São Francisco (em inglês: City and County of San Francisco), é a quarta cidade mais populosa do estado da Califórnia e a 17ª mais populosa dos Estados Unidos, com uma população de mais de 873 mil habitantes, segundo o censo nacional de 2020.</p>
                         </div>
                     </div>
-                    <div class="img-box">
+                    <div class="img-box-gf">
                         <p class="city-name">Pisa</p>
                         <img src="media/pisa.jpg" alt="">
                         <div class="about-city">
                             <p>Pisa é uma comuna italiana da região da Toscana, província de Pisa, com cerca de 85 379 habitantes. Estende-se por uma área de 185 km², tendo uma densidade populacional de 462 hab/km².</p>
                         </div>
                     </div>
-                    <div class="img-box">
+                    <div class="img-box-gf">
                         <p class="city-name">Paris</p>
                         <img src="media/paris.jpg" alt="">
                         <div class="about-city">
@@ -124,5 +178,35 @@
             </div>
         </div>
     </section>
+
+    <section class="explore-nature-sec">
+        <div class="container">
+            <div class="explore-nature-cont default-cont">
+                <h2>Explore Nature</h2>
+                <p>Travel with us and see nature at its finest</p>
+                <div class="en-imgs">
+                    <div class="en-img-box">
+                        <img src="media/ocean.jpg" alt="">
+                        <div class="en-text-box">
+                            <h3>West Coast, Norway</h3>
+                            <h4>Roundtrip from $79</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="">Buy Tickets</a>
+                        </div>
+                    </div>
+                    <div class="en-img-box">
+                        <img src="media/mountains.jpg" alt="">
+                        <div class="en-text-box">
+                            <h3>Mountains, Austria</h3>
+                            <h4>One-way from $39</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="">Buy Tickets</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
