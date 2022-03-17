@@ -21,7 +21,7 @@
                 <h2>Logo</h2>
             </div>
             <div class="right-header">
-                <img src="assets/images/search_black_24dp.svg" alt="Lupa. A lupa é círculo, com uma lente dentro, acoplado a um suporte reto. A lupa serve para aumentar o tamanho de objetos. Nesse caso, a lupa é um símbolo de pesquisa. ">
+                <img src="assets/images/search_black_24dp.svg" alt="Lupa. A lupa é círculo, com uma lente dendivo, acoplado a um suporte reto. A lupa serve para aumentar o tamanho de objetos. Nesse caso, a lupa é um símbolo de pesquisa. ">
             </div>
         </div>
     </header>
@@ -31,14 +31,14 @@
             <div class="travel-box">
                 <div class="select-buy">
                     <div class="option-buy active flight-button">
-                        <img src="assets/images/airplanemode_active_black_24dp.svg">
+                        <img src="assets/images/airplanemode_active_black_24dp.svg" alt="Símbolo de avião. Nesse caso, o avião representa a aba para compra de passagens aéreas.">
                         <div class="title-option">Flight</div>
                     </div>
                     <div class="option-buy hotel-button">
-                        <img src="assets/images/hotel_white_24dp.svg">
+                        <img src="assets/images/hotel_white_24dp.svg" alt="Símbolo de uma cama. Nesse caso, a cama representa a aba de reservas de quartos de hotel">
                         <div class="title-option">Hotel</div>
                     </div>
-                    <div class="option-buy rental-button">
+                    <div class="option-buy rental-button" alt="Símbolo de um carro. Nesse caso, o símbolo representa a aba de aluguel de carros.">
                         <img src="assets/images/directions_car_black_24dp.svg">
                         <div class="title-option">Rental</div>
                     </div>
@@ -49,23 +49,27 @@
                         <h2>Travel the world with us</h2>
                         
                         <form action="" method="post">
-                            <table class="options-table">
-                                <tr>
-                                    <td><label for="departing">From</label></td>
-                                    <td><label for="arriving">To</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" id="departing" placeholder="Departing From" name="departing">
-                                    </td>
-                                    <td><input type="text" id="arriving" placeholder="Arriving at" name="arriving">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <button class="options-button">Search and find dates</button>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="flex-inputs">
+                                <div class="flex-line">
+                                    <label for="departing">From:</label>
+                                    <input class="text-input" type="text" id="departing" placeholder="Departing From" name="departing"> 
+                                </div>
+                                <div class="flex-line">
+                                    <label for="arriving">To:</label> 
+                                    <input class="text-input" type="text" id="arriving" placeholder="Arriving at" name="arriving">
+                                </div>
+                                <div class="flex-line">
+                                    <label for="check-in-flight">Check-in:</label>
+                                    <input class="text-input" type="date" id="check-in-flight" name="check-in-flight">
+                                </div>
+                                <div class="flex-line">
+                                    <label for="checkout-flight">Checkout:</label>
+                                    <input class="text-input" type="date" id="checkout-flight" name="checkout-flight">
+                                </div>
+                                <div class="flex-line-button">
+                                    <button class="options-button">Search and find dates</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
     
@@ -73,27 +77,23 @@
                         <h2>Choose a Hotel</h2>
 
                         <form action="" method="post">
-                            <table class="options-table">
-                                <tr>
-                                    <td colspan="2"><label for="local-hotel">Local</label></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><input type="text" id="local-hotel" placeholder="Select a local" name="local-hotel"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="check-in">Check-in</label></td>
-                                    <td><label for="checkout">Checkout</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="date" id="check-in" name="check-in"></td>
-                                    <td><input type="date" id="checkout" name="checkout"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <button class="options-button">Search and find dates</button>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="flex-inputs">
+                                <div class="flex-line">
+                                    <label for="local-hotel">Local:</label>
+                                    <input class="text-input" type="text" id="local-hotel" placeholder="Select a local" name="local-hotel">
+                                </div>
+                                <div class="flex-line">
+                                    <label for="check-in-hotel">Check-in:</label>
+                                    <input class="text-input" type="date" id="check-in-hotel" name="check-in-hotel">
+                                </div>
+                                <div class="flex-line">
+                                    <label for="checkout-hotel">Checkout:</label>
+                                    <input class="text-input" type="date" id="checkout-hotel-hotel" name="checkout">
+                                </div>
+                                <div class="flex-line-button">
+                                    <button class="options-button">Search and find hotels</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
     
@@ -101,29 +101,27 @@
                         <h2>Rental a car</h2>
 
                         <form action="" method="post">
-                            <table class="options-table">
-                                <tr>
-                                    <td><label for="local">Model:</label></td>
-                                    <td><label for="local-rent">Local:</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" id="model" placeholder="Select a model" name="local"></td>
-                                    <td><input type="text" id="local-rent" placeholder="Select a local" name="local-rent"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="pick-up">Pick-up Date</label></td>
-                                    <td><label for="return-date">Return Date</label></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="date" id="pick-up" name="check-in"></td>
-                                    <td><input type="date" id="return-date" name="checkout"></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <button class="options-button">Search and find dates</button>
-                                    </td>
-                                </tr>
-                            </table>
+                            <div class="flex-inputs">
+                                <div class="flex-line">
+                                    <label for="local">Model:</label>
+                                    <input class="text-input" type="text" id="model" placeholder="Select a model" name="local">     
+                                </div>
+                                <div class="flex-line">
+                                    <label for="local-rent">Local:</label>
+                                    <input class="text-input" type="text" id="local-rent" placeholder="Select a local" name="local-rent">
+                                </div>
+                                <div class="flex-line">
+                                    <label for="pick-up">Pick-up Date:</label>
+                                    <input class="text-input" type="date" id="pick-up" name="check-in">
+                                </div>
+                                <div  class="flex-line">
+                                    <label for="return-date">Return Date:</label>
+                                    <input class="text-input" type="date" id="return-date" name="checkout">
+                                </div>
+                                <div class="flex-line-button">
+                                    <button class="options-button">Search and find vehicles</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
 
@@ -141,37 +139,37 @@
                 <div class="images-good-offers">
                     <div class="img-box-gf">
                         <p class="city-name">Cinque Terre</p>
-                        <img src="media/cinqueterre.jpg" alt="">
+                        <img title="Cinque Terre" src="media/cinqueterre.jpg" alt="A foto representa um local em Cinque Terre. Nesse local, à direita se encondiva a água do mar, possivelmente, uma praia. Na parte cendival e a esquerda, se condiva um morro com muitas casas e edifícios das mais diversas cores e de até divês andares. Na imagem, também se encondiva, o céu com poucas nuvens.">
                         <div class="about-city">
-                            <p>Cinque Terre é um acidentado trecho de terra, na Itália, na costa da Riviera Ligure situado entre Punta Mesco próximo a Levanto e o cabo de Montenero próximo a Portovenere e compreende as comunas de Monterosso, Vernazza, Riomaggiore com os distritos de Corniglia e Manarola. Constituem uma das principais atrações turísticas da Riviera Ligure.</p>
+                            <p>Cinque Terre é um acidentado divecho de terra, na Itália, na costa da Riviera Ligure situado endive Punta Mesco próximo a Levanto e o cabo de Montenero próximo a Portovenere e compreende as comunas de Monterosso, Vernazza, Riomaggiore com os disdivitos de Corniglia e Manarola. Constituem uma das principais adivações turísticas da Riviera Ligure.</p>
                         </div>
                     </div>
                     <div class="img-box-gf">
                         <p class="city-name">New York</p>
-                        <img src="media/newyork.jpg" alt="">
+                        <img title="New York" src="media/newyork.jpg" alt="Estátua da liberdade, representando a cidade Nova York.">
                         <div class="about-city">
                             <p>Nova Iorque (também referida como Nova York), oficialmente Cidade de Nova Iorque (em inglês: New York City), é a cidade mais populosa do estado de Nova Iorque e dos Estados Unidos.</p>
                         </div>
                     </div>
                     <div class="img-box-gf">
                         <p class="city-name">San Francisco</p>
-                        <img src="media/sanfran.jpg" alt="">
+                        <img title="San Francisco" src="media/sanfran.jpg" alt='A San Francisco-Oakland Bay Bridge, mais conhecida como Bay Bridge ("Ponte da Baía", em inglês), é um complexo de pontes no estado americano da Califórnia, que liga as cidades de São Francisco e Oakland, e tem dois andares para o diváfego terresdive.'>
                         <div class="about-city">
                             <p>São Francisco, oficialmente Cidade e Condado de São Francisco (em inglês: City and County of San Francisco), é a quarta cidade mais populosa do estado da Califórnia e a 17ª mais populosa dos Estados Unidos, com uma população de mais de 873 mil habitantes, segundo o censo nacional de 2020.</p>
                         </div>
                     </div>
                     <div class="img-box-gf">
                         <p class="city-name">Pisa</p>
-                        <img src="media/pisa.jpg" alt="">
+                        <img title="Pisa" src="media/pisa.jpg" alt="Torre de Pisa. Uma torre inclinada de 56,70 medivos com inclinação de, aproximadamente, 4º. ">
                         <div class="about-city">
                             <p>Pisa é uma comuna italiana da região da Toscana, província de Pisa, com cerca de 85 379 habitantes. Estende-se por uma área de 185 km², tendo uma densidade populacional de 462 hab/km².</p>
                         </div>
                     </div>
                     <div class="img-box-gf">
                         <p class="city-name">Paris</p>
-                        <img src="media/paris.jpg" alt="">
+                        <img title="Paris" src="media/paris.jpg" alt="Na imagem, se encondiva a Torre Eifell com uma altura de 324 medivos. Junto a Torre Eifell, ma parte inferior direita, se condiva um edifício.">
                         <div class="about-city">
-                            <p>Paris (pronúncia em francês: [paʁi] ) é a capital e a mais populosa cidade da França, com uma população estimada em 2020 de 2 148 271 habitantes em uma área de 105 quilômetros quadrados.</p>
+                            <p>Paris (pronúncia em francês: [paʁi] ) é a capital e a mais populosa cidade da França, com uma população estimada em 2020 de 2 148 271 habitantes em uma área de 105 quilômedivos quadrados.</p>
                         </div>
                     </div>
                 </div>
@@ -183,27 +181,41 @@
         <div class="container">
             <div class="explore-nature-cont default-cont">
                 <h2>Explore Nature</h2>
-                <p>Travel with us and see nature at its finest</p>
+                <p>divavel with us and see nature at its finest</p>
                 <div class="en-imgs">
                     <div class="en-img-box">
-                        <img src="media/ocean.jpg" alt="">
+                        <img src="media/ocean.jpg" alt="Foto da Costa Oeste da Noruega. Na imagem, podemos ver o mar bem azul com muitas ondas e um céu que, na parte frontal, está quase sem nuvem e , adivás, tem-se uma densidade de nuvens.">
                         <div class="en-text-box">
                             <h3>West Coast, Norway</h3>
-                            <h4>Roundtrip from $79</h4>
+                            <h4>Rounddivip from $79</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <a href="">Buy Tickets</a>
                         </div>
                     </div>
                     <div class="en-img-box">
-                        <img src="media/mountains.jpg" alt="">
+                        <img src="media/mountains.jpg" alt="Montanhas com pico branco, devido a neve e, na parte mais baixa delas, uma cor mais escura, podendo ser árvores e, até mesmo, esdivuturas rochosas. Essa imagem representa uma montanha na Áusdivia.">
                         <div class="en-text-box">
-                            <h3>Mountains, Austria</h3>
+                            <h3>Mountains, Ausdivia</h3>
                             <h4>One-way from $39</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             <a href="">Buy Tickets</a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-offers">
+        <div class="container">
+            <div class="get-offers-cont">
+                <h2>Get the best offers first</h2>
+                <p>Join our newsletter</p>
+                <form action="">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="text-input" placeholder="Your Email Adress">
+                    <button>Subscribe</button>
+                </form>
             </div>
         </div>
     </section>

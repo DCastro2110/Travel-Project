@@ -121,7 +121,7 @@ header {
 
 .slider-options-buy {
     width: 300%;
-    transition: margin 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
     display: flex;
     justify-content: center;
 }
@@ -140,32 +140,48 @@ header {
     margin: 10px ;
 }
 
-.options-table {
+.flex-inputs {
     width: 100%;
-    border-spacing: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 form {
     width: 100%;
 }
 
-.options-table input, .options-button {
-    width: 100%;
+.flex-line {
+    flex-basis: calc(50% - 5px);
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.flex-line-button {
+    flex-basis: 50%;
+}
+
+.hotel-box .flex-line:first-child {
+    flex-basis: 100%;
+}
+
+.text-input, .options-button {
     height: 40px;
     padding: 5px 10px;
     border: 1px solid #616161;;
     outline: none;
     border-radius: 5px;
     transition: border-color 150ms ease-in-out;
+    font-size: 14px;
 }
 
-.options-table input:focus {
+.text-input:focus {
     border-color: var(--orange-color);
 }
 
 .options-button {
-    width: 20%;
-    min-width: 180px;
+    width: 185px;
     font-size: 15px;
     background-color: #616161;
     color: #ffffff;
@@ -178,7 +194,7 @@ form {
     background-color: #4b4b4b; 
 }
 
-.options-table input::placeholder {
+.text-input:placeholder {
     color: #828f99;
     font-size: 15px;
 }
@@ -303,4 +319,63 @@ form {
     margin-left: 5px;
     text-decoration: none;
     color: #000;
+}
+
+/* Get Offers */
+
+.get-offers {
+    width: 100%;
+}
+
+.get-offers-cont {
+    background-color: #606060;
+    padding: 10px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.get-offers-cont h2 {
+    color: #fff;
+    font-weight: 300;
+}
+
+.get-offers-cont p {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.get-offers-cont form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.get-offers-cont button {
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--orange-color);
+    border: none;
+    margin-top: 10px;
+    transition: background-color 150ms ease-in-out;
+    cursor: pointer;
+}
+
+.get-offers-cont button:hover {
+    background-color: #c9372d;
+}
+
+@media (max-width: 480px) {
+    .flex-line-button {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .flex-line {
+        flex-basis: 100%;
+    }
+    .flex-inputs {
+        align-items: center;
+    }
 }

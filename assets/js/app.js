@@ -3,11 +3,11 @@
         const el = e.target;
         const allOptions = document.querySelector('.slider-options-buy');
         const optionsBuy = document.querySelectorAll('.option-buy');
-        const margins = ['0', '-100%', '-200%']
+        const translateQuantify = ['0', 'calc(-100% / 3)', 'calc(-100% * 2 / 3)']
 
         for (i in optionsBuy) {
             if (el === optionsBuy[i] || el.parentElement === optionsBuy[i]) {
-                allOptions.style.marginLeft = margins[i];
+                allOptions.style.transform = `translateX(${translateQuantify[i]})`;
                 optionsBuy.forEach(element => element.classList.remove('active'));
                 el.classList.add('active');
             }
