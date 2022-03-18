@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="assets/js/app.js" defer></script>
     <title>Travel</title>
 
@@ -31,15 +32,15 @@
             <div class="travel-box">
                 <div class="select-buy">
                     <div class="option-buy active flight-button">
-                        <img src="assets/images/airplanemode_active_black_24dp.svg" alt="Símbolo de avião. Nesse caso, o avião representa a aba para compra de passagens aéreas.">
+                        <span class="material-icons">flight</span>
                         <div class="title-option">Flight</div>
                     </div>
                     <div class="option-buy hotel-button">
-                        <img src="assets/images/hotel_white_24dp.svg" alt="Símbolo de uma cama. Nesse caso, a cama representa a aba de reservas de quartos de hotel">
+                        <span class="material-icons">hotel</span>
                         <div class="title-option">Hotel</div>
                     </div>
                     <div class="option-buy rental-button" alt="Símbolo de um carro. Nesse caso, o símbolo representa a aba de aluguel de carros.">
-                        <img src="assets/images/directions_car_black_24dp.svg">
+                        <span class="material-icons">directions_car</span>
                         <div class="title-option">Rental</div>
                     </div>
                 </div>
@@ -67,7 +68,7 @@
                                     <input class="text-input" type="date" id="checkout-flight" name="checkout-flight">
                                 </div>
                                 <div class="flex-line-button">
-                                    <button class="options-button">Search and find dates</button>
+                                    <button class="form-button">Search and find dates</button>
                                 </div>
                             </div>
                         </form>
@@ -91,7 +92,7 @@
                                     <input class="text-input" type="date" id="checkout-hotel-hotel" name="checkout">
                                 </div>
                                 <div class="flex-line-button">
-                                    <button class="options-button">Search and find hotels</button>
+                                    <button class="form-button">Search and find hotels</button>
                                 </div>
                             </div>
                         </form>
@@ -119,7 +120,7 @@
                                     <input class="text-input" type="date" id="return-date" name="checkout">
                                 </div>
                                 <div class="flex-line-button">
-                                    <button class="options-button">Search and find vehicles</button>
+                                    <button class="form-button">Search and find vehicles</button>
                                 </div>
                             </div>
                         </form>
@@ -216,6 +217,44 @@
                     <input type="email" name="email" id="email" class="text-input" placeholder="Your Email Adress">
                     <button>Subscribe</button>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-sec">
+        <div class="container">
+            <div class="contact-cont default-cont">
+                <h2>Contact</h2>
+                <p>Let us book your next trip!</p>
+                
+                <div class="contact-infos">
+                    <div class="contact-info">
+                        <span class="material-icons contact-icons">place</span>
+                        <p>Chicago, US</p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <span class="material-icons contact-icons">phone</span>
+                        <p>Phone: +00 151515</p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <span class="material-icons contact-icons">email</span>
+                        <p>Email: mail@mail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="" method="get">
+                        <input class="text-input" type="text" placeholder="Name" name="name">
+
+                        <input class="text-input" type="email" placeholder="Email" name="contact-email">
+
+                        <input class="text-input" type="text" placeholder="Message" name="contact-message">
+
+                        <button class="form-button">Send message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
