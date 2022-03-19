@@ -3,6 +3,7 @@
     --blue-font-color: #000052;
     --grey-color: #f1f1f1;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -76,10 +77,35 @@ header {
     cursor: pointer;
 }
 
+/* Header - Dark Mode */
+
+.dark-mode-div {
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--orange-color);
+}
+
+.dark-mode-dot {
+    height: 18px;
+    width: 18px;
+    margin-left: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 100ms linear;
+}
+
+.checkbox-dark-mode {
+    display: none;
+}
+
 /* Main Section */
 
 .main-section {
-    height: calc(90vh - 50px);
+    min-height: calc(90vh - 50px);
     background-image: url(../images/london.jpg);
     background-position: center;
     background-size: cover;
@@ -415,6 +441,40 @@ form {
     background-color: #333;
 }
 
+/* Footer */
+
+.footer-cont h3 {
+    font-weight: 300;
+    color: #606060;
+    margin-bottom: 35px;
+}
+
+.footer-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 40px;
+}
+
+.social-media img {
+    height: 22px;
+    cursor: pointer;
+}
+
+.create-by {
+    color: #606060;
+    font-weight: 300;
+}
+
+.create-by a {
+    color: inherit
+}
+
 @media (max-width: 480px) {
     .flex-line-button {
         flex-basis: 100%;
@@ -427,4 +487,11 @@ form {
     .flex-inputs {
         align-items: center;
     }
+
+    .images-good-offers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
 }
