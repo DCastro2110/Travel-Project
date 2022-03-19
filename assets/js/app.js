@@ -9,8 +9,6 @@
 
         const darkModeDot = document.querySelector('.dark-mode-dot')
 
-        console.log(el)
-
         for (i in optionsBuy) {
             if (el === optionsBuy[i] || el.parentElement === optionsBuy[i]) {
                 allOptions.style.transform = `translateX(${translateQuantify[i]})`;
