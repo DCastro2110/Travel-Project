@@ -1,13 +1,15 @@
 (function() {
     const checkbox = document.querySelector('.checkbox-dark-mode')
+    const darkModeDot = document.querySelector('.dark-mode-dot');
+
+    recoverState()
 
     document.addEventListener('click', (e) => {
         const el = e.target;
         const allOptions = document.querySelector('.slider-options-buy');
         const optionsBuy = document.querySelectorAll('.option-buy');
         const translateQuantify = ['0', 'calc(-100% / 3)', 'calc(-100% * 2 / 3)'];
-        const darkModeDot = document.querySelector('.dark-mode-dot');
-
+    
         for (i in optionsBuy) {
             if (el === optionsBuy[i] || el.parentElement === optionsBuy[i]) {
                 allOptions.style.transform = `translateX(${translateQuantify[i]})`;
@@ -17,11 +19,12 @@
         }
 
         if (el.classList.contains('dark-mode-div') || el === darkModeDot) {
-            checker(darkModeDot)
+            checker()
+            saveState()
         }
     })
 
-    function checker(darkModeDot) {
+    function checker() {
         if (!checkbox.checked) {
             checkbox.checked = true
             darkModeDot.classList.add('dark-mode-on');
@@ -30,7 +33,7 @@
         } 
         checkbox.checked = false
         darkModeDot.classList.remove('dark-mode-on');
-        darkMode('off')
+        darkMode('off');
     }
 
     function darkMode(value) {
@@ -38,6 +41,31 @@
         html.dataset.darkMode = value;
     }
 
+    function saveState() {
+        const darkModeState = checkbox.checked;
+        localStorage.setItem('dark-mode-state', darkModeState)
+    }
+
+    function recoverState() {
+        let darkModeState = localStorage.getItem('dark-mode-state')
+
+        if (darkModeState === 'true') {
+            darkModeState = true
+        } else {
+            darkModeState = false
+        }
+        
+        checkbox.checked = darkModeState;
+        
+        if (checkbox.checked === true) {
+            darkModeDot.classList.add('dark-mode-on');
+            darkMode('on')
+            return
+        } else {
+            darkModeDot.classList.remove('dark-mode-on');
+            darkMode('off')
+        }
+    }
 }) ()
 
 
