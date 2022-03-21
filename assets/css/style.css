@@ -87,15 +87,24 @@ header {
     align-items: center;
     cursor: pointer;
     background-color: var(--orange-color);
+    background-position: right;
+    background-size: 20px;
 }
+
+.checkbox:checked .dark-mode-dot {
+    background-color: #000052;
+    transform: translateX(20px);
+} 
 
 .dark-mode-dot {
     height: 18px;
     width: 18px;
+   
     margin-left: 1px;
     background-color: #fff;
     border-radius: 50%;
-    transition: transform 100ms linear;
+    transform: translateX(0);
+    transition: transform 150ms linear;
 }
 
 .checkbox-dark-mode {
