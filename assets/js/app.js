@@ -12,13 +12,12 @@
             if (el === optionsBuy[i] || el.parentElement === optionsBuy[i]) {
                 allOptions.style.transform = `translateX(${translateQuantify[i]})`;
                 optionsBuy.forEach(element => element.classList.remove('active'));
-                el.classList.add('active');
+                optionsBuy[i].classList.add('active');
             }
         }
 
         if (el.classList.contains('dark-mode-div') || el === darkModeDot) {
             checker(darkModeDot)
-            console.log(checkbox.checked)
         }
     })
 
@@ -26,10 +25,17 @@
         if (!checkbox.checked) {
             checkbox.checked = true
             darkModeDot.classList.add('dark-mode-on');
+            darkMode('on')
             return
         } 
         checkbox.checked = false
         darkModeDot.classList.remove('dark-mode-on');
+        darkMode('off')
+    }
+
+    function darkMode(value) {
+        const html = document.querySelector("html")
+        html.dataset.darkMode = value;
     }
 
 }) ()
