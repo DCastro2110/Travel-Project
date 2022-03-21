@@ -91,21 +91,20 @@ header {
     background-size: 20px;
 }
 
-.checkbox:checked .dark-mode-dot {
-    background-color: #000052;
-    transform: translateX(20px);
-} 
-
 .dark-mode-dot {
     height: 18px;
     width: 18px;
-   
     margin-left: 1px;
     background-color: #fff;
     border-radius: 50%;
     transform: translateX(0);
     transition: transform 150ms linear;
 }
+
+.dark-mode-dot.dark-mode-on  {
+    background-color: #000052;
+    transform: translateX(20px);
+} 
 
 .checkbox-dark-mode {
     display: none;

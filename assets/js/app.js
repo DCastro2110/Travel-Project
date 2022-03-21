@@ -17,17 +17,19 @@
         }
 
         if (el.classList.contains('dark-mode-div') || el === darkModeDot) {
-            checker()
-            darkModeBtn(darkModeDot)
+            checker(darkModeDot)
+            console.log(checkbox.checked)
         }
     })
 
-    function checker() {
-        if (checkbox.checked) {
-            checkbox.checked = false
+    function checker(darkModeDot) {
+        if (!checkbox.checked) {
+            checkbox.checked = true
+            darkModeDot.classList.add('dark-mode-on');
             return
         } 
-        checkbox.checked = true;
+        checkbox.checked = false
+        darkModeDot.classList.remove('dark-mode-on');
     }
 
 }) ()
