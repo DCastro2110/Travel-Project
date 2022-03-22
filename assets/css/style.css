@@ -301,7 +301,6 @@ form {
 .img-box-gf {
     padding: 5px;
     position: relative;
-    cursor: pointer;
 }
 .img-box-gf:nth-child(1) {
     grid-area: cinqueterre;
@@ -335,32 +334,6 @@ p.city-name {
     bottom: 10px;
     margin-left: 10px;
     font-weight: 600;
-}
-
-.about-city {
-    position: absolute;
-    top: 5px;
-    bottom: 5px;
-    left: 5px;
-    right: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 150ms ease-in-out;
-}
-
-.about-city:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-.about-city p {
-    color: transparent;
-    font-size: 13px;
-    padding: 5px;
-    color: transparent;
-    transition: color 150ms ease-in-out;
-}
-.img-box-gf:hover .about-city p {
-    color: #fff;
 }
 
 /* Explore Nature */
@@ -570,5 +543,11 @@ p.city-name {
         flex-direction: column;
     }
 
-    
+    .contact-form .form-button {
+        margin: auto;
+    }
+    .option-buy {
+        font-size: 13px;
+        gap: 5px;
+    }
 }
