@@ -531,11 +531,17 @@ p.city-name {
         display: flex;
         justify-content: center;
     }
+    
     .flex-line {
         flex-basis: 100%;
     }
+    
     .flex-inputs {
         align-items: center;
+    }
+
+    .date-input, .flex-inputs {
+        width: 100%;
     }
 
     .images-good-offers {
@@ -546,6 +552,7 @@ p.city-name {
     .contact-form .form-button {
         margin: auto;
     }
+    
     .option-buy {
         font-size: 13px;
         gap: 5px;
