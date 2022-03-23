@@ -146,7 +146,7 @@ header {
 
 /* Main Section */
 
-.main-section {
+.main {
     min-height: calc(90vh - 50px);
     background-image: url(../images/london.jpg);
     background-position: center;
