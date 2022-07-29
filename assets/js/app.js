@@ -48,16 +48,15 @@
 
     function recoverState() {
         let darkModeState = localStorage.getItem('dark-mode-state')
-        checkbox.checked = eval(darkModeState);
+        checkbox.checked = Boolean(darkModeState);
         
         if (checkbox.checked) {
             darkModeDot.classList.add('dark-mode-on');
             darkMode('on')
             return
-        } else {
-            darkModeDot.classList.remove('dark-mode-on');
-            darkMode('off')
-        }
+        } 
+        darkModeDot.classList.remove('dark-mode-on');
+        darkMode('off')
     }
 }) ()
 
